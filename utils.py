@@ -22,7 +22,7 @@ class Vector:
         self.z = z
 
 
-    def divide(self, scalar):
+    def multiplicate(self, scalar):
         self.x *= scalar
         self.y *= scalar
         self.z *= scalar
