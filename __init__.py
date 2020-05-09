@@ -15,7 +15,7 @@ if __name__ == "__main__":
     screen = pygame.display.set_mode(size)
     screen.fill(color)
 
-    snake = Snake()
+    snake = Snake(width=10)
     food = Vector(randint(snake.width, width), randint(snake.width, height))
     while True:
         
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         if snake.eat(food):
             food = Vector(randint(snake.width, width), randint(snake.width, height))
 
-        rect = pygame.Rect(food.x, food.y, 5,5)
+        rect = pygame.Rect(food.x, food.y, snake.width, snake.width)
         pygame.draw.rect(screen, (255, 0, 0), rect)
         
         for event in pygame.event.get():
